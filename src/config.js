@@ -69,6 +69,11 @@ import HubsSoundPackSource from "./ui/assets/sources/HubsSoundPackSource";
 import TroikaTextNode from "./editor/nodes/TroikaTextNode";
 import TroikaTextNodeEditor from "./ui/properties/TroikaTextNodeEditor";
 
+import LuidaObjectNode from "./editor/nodes/LuidaObjectNode";
+import LuidaObjectNodeEditor from "./ui/properties/LuidaObjectNodeEditor";
+import LuidaFormPanelNode from "./editor/nodes/LuidaFormPanelNode";
+import LuidaFormPanelNodeEditor from "./ui/properties/LuidaFormPanelNodeEditor";
+
 export function createEditor(api, settings) {
   const editor = new Editor(api, settings);
 
@@ -100,6 +105,8 @@ export function createEditor(api, settings) {
   editor.registerNode(AudioZoneNode, AudioZoneNodeEditor);
   editor.registerNode(TroikaTextNode, TroikaTextNodeEditor);
   editor.registerNode(MirrorNode, MirrorNodeEditor);
+  editor.registerNode(LuidaObjectNode, LuidaObjectNodeEditor);
+  editor.registerNode(LuidaFormPanelNode, LuidaFormPanelNodeEditor);
 
 
   editor.registerSource(new ElementsSource(editor));
